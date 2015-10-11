@@ -1,0 +1,44 @@
+# Site wide configuration
+
+title: "zhlinh's Tech Blog"
+description: "A lightweight blog site starter for Jekyll"
+logo: logo.jpg # 120x120 px default image used for Twitter summary card
+teaser: /teaser/default.jpg # 400x250 px default teaser image used in image archive grid
+locale:
+url:
+
+default:
+    -
+        scope:
+            type: "article"
+        values:
+            ads: false
+            toc: false
+
+# Jekyll configuration
+
+sass:
+    sass_dir: _sass
+    style: compressed
+permalink: /:categories/:title/
+kramdown:
+  toc_levels: 1..2
+highlighter: pygments
+gems:
+  - jekyll-sitemap
+
+
+# Site owner
+owner:
+  name: zhlinh (黄振林)
+  email: zhlinhng@gmail.com
+  twitter: zhlinh
+  google:
+    ad -client:
+    ad-slot:
+  bio:
+  avatar: logo.jpg # 160x160 px image for author byline
+disqus-shortname: zhlinh
+
+
+exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]

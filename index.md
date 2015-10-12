@@ -22,7 +22,7 @@ image:
 </div><!-- /.tile -->
 
 <div class="tile">
-  <h2 class="post-title">Day dreams</h2>
+  <h2 class="post-title">Day Dreams</h2>
   <p class="post-excerpt">
     But I, being poor, have only my dreams.
     I have spread my dreams under your feet. Tread softly because you tread on my dreams.

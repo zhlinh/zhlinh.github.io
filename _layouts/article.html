@@ -30,7 +30,11 @@ layout: default
 				</aside>
 			</div><!-- /.content -->
 		</div><!-- /.inner-wrap -->
-		{% if page.ads == true %}<div class="ads">{% include advertising.html %}</div><!-- /.ads -->{% endif %}
+		{% if page.ads == true %}
+            <div class="ads">{% include advertising.html %}</div><!-- /.ads -->
+        {% else %}
+            <div class="ads about-me">{% include about-me.html %}</div>
+        {% endif %}
 	</article><!-- ./wrap -->
 
 </div><!-- /#main -->

@@ -212,7 +212,7 @@
 			margin-right: 0;
 		}
 		&:after {
-			content: 'Advertisement';
+            content: 'Advertisement';
 			position: absolute;
 			bottom: 0;
 			width: 100%;
@@ -225,6 +225,11 @@
 			border-width: 0;
 		}
 	}
+    .about-me {
+        &:after {
+            content: 'About.Me';
+        }
+    }
 }
 // page lead
 .page-lead {

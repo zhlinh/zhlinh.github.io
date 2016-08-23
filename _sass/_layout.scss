@@ -147,10 +147,41 @@
 		@include media($medium) {
 			@include span-columns(9);
 		}
+        .toc {
+            min-height: 1px;
+            ul {
+                margin-top: $gutter;
+                border: 1px solid $border-color;
+                border-radius: $border-radius;
+            }
+            li {
+                @include media($micro) { @include font-size(16,no,18); }
+                @include media($small) { @include font-size(16,no,18); }
+                @include font-size(12,no,16);
+                border-bottom: 1px solid $border-color;
+            }
+            font-family: $alt-font;
+            a {
+                display: block;
+                padding: (.25 * $gutter) (.5 * $gutter);
+                border-left: 2px solid transparent;
+                &:hover,
+                &:focus {
+                    background: lighten($border-color,5);
+                }
+            }
+            .toc-h2 {
+                padding-left: 10px;
+            }
+            .toc-h3 {
+                padding-left: 20px;
+            }
+        }
 	}
 	.page-title {
 		@include fill-parent;
 	}
+    // table of contents
 	@at-root {
 		.page-content {
 			@include fill-parent;
@@ -212,7 +243,8 @@
 			margin-right: 0;
 		}
 		&:after {
-            content: 'Advertisement';
+			/* content: 'Advertisement'; */
+            content: 'about.me';
 			position: absolute;
 			bottom: 0;
 			width: 100%;
@@ -225,11 +257,6 @@
 			border-width: 0;
 		}
 	}
-    .about-me {
-        &:after {
-            content: 'About.Me';
-        }
-    }
 }
 // page lead
 .page-lead {
@@ -301,7 +328,6 @@
 		}
 	}
 }
-
 /*
    Page footer
    ========================================================================== */

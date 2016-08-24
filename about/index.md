@@ -2,6 +2,7 @@
 layout: article
 permalink: /about/
 title: About
+ads: true
 ---
 
 > Be the change if you want to see the world.

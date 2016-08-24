@@ -2,6 +2,7 @@
 layout: article
 title:  "Effective Java (2nd Edition)"
 categories: archive
+tags: [java, reading]
 toc: true
 image:
     teaser: /teaser/2016-08-23-Effective-Java-(2nd-Edition).jpg
@@ -18,7 +19,7 @@ date: 2016-08-23
 
 ---
 
-## 1. Todo
+## 1 Todo
 
 - [ ] 查询JavaBeans模式
 - [ ] 查询Emacs的单线程的影响，这跳跃性思维也是醉。。。

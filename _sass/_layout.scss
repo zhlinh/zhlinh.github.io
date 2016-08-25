@@ -255,7 +255,6 @@
     }        
     a {
         display: block;
-        color: #000;
         text-decoration: none;
         padding: (.25 * $gutter) (.5 * $gutter);
         &:hover,
@@ -263,10 +262,10 @@
             background: lighten($border-color,5);
         }
     }
-    .h2 {
+    .toc-h2 {
         padding-left: 20px;
     }
-    .h3 {
+    .toc-h3 {
         padding-left: 40px;
     }
     .toc-active {

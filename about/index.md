@@ -9,15 +9,15 @@ ads: true
 
 ## Who am I
 
-+ I’m a coding lover, fan of reading, movies and cooking.
-+ Being a student at XiDian University now.
-+ My GitHub page: [zhlinh at GitHub](https://github.com/zhlinh)
+* I’m a coding lover, fan of reading, movies and cooking.
+* Being a student at Xidian University now.
+* My GitHub page: [zhlinh at GitHub](https://github.com/zhlinh)
 
 ## Education
 
-- Post Graduate Grade 2
-- Communication Engineering
-- XiDian University
+* Post Graduate Grade 3
+* Communication Engineering
+* Xidian University
 
 ## Advice for Contacting zhlinh
 

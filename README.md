@@ -2,35 +2,35 @@
 
 [![Build Status](https://travis-ci.org/zhlinh/zhlinh.github.io.svg?branch=master)](https://travis-ci.org/zhlinh/zhlinh.github.io)
 
-ZHLINH'S TEC BLOG based on the template [Skinny Bones](http://mmistakes.github.io/skinny-bones-jekyll/).
+ZHLINH'S TECH BLOG based on the template [Skinny Bones](http://mmistakes.github.io/skinny-bones-jekyll/).
 
 ![screenshot of Skinny Bones](skinny-bones-template.jpg)
 
 ---
 
-## Notable Features
+## NOTABLE FEATURES
 
 * Stylesheet built using Sass. *Requires Jekyll 2.x*
 * Data files for easier customization of the site navigation/footer and for supporting multiple authors.
 * Optional Disqus comments, table of contents, social sharing links, and Google AdSense ads.
 * And more.
 
-## Usage
+## USAGE
 
 Install:
 ```
 $ bundle install
 ```
 
-Script to run Jekyll: 
+Script to run Jekyll:
 ```
 $ bundle exec jekyll build
 $ bundle exec jekyll serve
 ```
 
-## Development
+## DEVELOPMENT
 
-### Scaffolding
+### SCAFFOLDING
 
 ```
 project root
@@ -45,14 +45,14 @@ project root
 |    └── media.html                     # portfolio, work, media layout
 ├── _posts                              # posts grouped by category for sanity
 ├── _sass
-|   ├── vendor                          
-|   |   ├── bourbon                     # Bourbon mixin library   
+|   ├── vendor
+|   |   ├── bourbon                     # Bourbon mixin library
 |   |   └── neat                        # Neat grid library
 |   ├── _animations.scss                # CSS3 animations
 |   ├── _badges.scss                    # small badges
 |   ├── _bullets.scss                   # visual bullets
 |   ├── _buttons.scss                   # buttons
-|   ├── _grid-settings.scss             # Neat settings         
+|   ├── _grid-settings.scss             # Neat settings
 |   ├── _helpers.scss                   # site wide helper classes
 |   ├── _layout.scss                    # structure and placement, the bulk of the design
 |   ├── _mixins.scss                    # custom mixins
@@ -76,21 +76,35 @@ project root
 └── _config.yml                         # Jekyll settings
 ```
 
-### Post
+### POST
 
-Create new MarkDown (.md) files in `_posts`. You can organize it like 
+Create new MarkDown (.md) files in `_posts`. You can organize it like
 `_posts/category-name/2014-06-01_aticle-name.md`.
 
-The only YAML Front Matter required for posts and pages are title and layout,
-everything else is optional. The following is some examples.
+The only YAML Front Matter required for posts and pages are title, layout and
+permalink, everything else is optional. The following is some examples.
 
-Modified Date:
+> Title & Layout
+
+```
+tilte: About
+layout: article
+permalink: /about/
+
+title: Latest Posts
+layout: home
+permalink: /
+```
+
+> Modified Date
+
 ```
 modified: 2014-08-27
 modified: 2014-08-27T11:57:41-04:00 # more verbose, also acceptable
 ```
 
-Image
+> Image
+
 ```
 image:
   feature: feature-image-filename.jpg
@@ -98,7 +112,8 @@ image:
   creditlink: https://mademistakes.com #url to their site or licensing
 ```
 
-Others
+> Others
+
 ```
 # Table of contents
 toc: true
@@ -108,7 +123,7 @@ ads: true
 comments: true
 ```
 
-### Page 
+### PAGE
 
 > Layout
 
@@ -120,7 +135,7 @@ Maintaining pretty URLs for your site can be handled in two ways when creating
 new pages.
 
 Place a `.md` file at the root level and add the appropriate permalink to the
-YAML Front Matter.  For example if you want your **About** page to live at 
+YAML Front Matter.  For example if you want your **About** page to live at
 `domain.com/about/` create a file named `/about.md` and add `permalink: /about/`
 to its YAML Front Matter.
 
@@ -129,6 +144,6 @@ Up to you how you’d like to organize your pages.
 
 You can also group pages in a `_pages` folder similiar to `_posts`.
 
-## License
+## LICENSE
 
 [The MIT License (MIT)](http://opensource.org/licenses/MIT)

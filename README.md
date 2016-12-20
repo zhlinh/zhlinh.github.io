@@ -144,6 +144,12 @@ Up to you how you’d like to organize your pages.
 
 You can also group pages in a `_pages` folder similiar to `_posts`.
 
+> Navigation
+
+`_includes/navigation.html` and `_includes/navigation-sliding.html` retrieve the
+links from the definition in `_data/navigation.yml` and `_data/navigation-sliding.yml`.
+
+
 ## LICENSE
 
 [The MIT License (MIT)](http://opensource.org/licenses/MIT)

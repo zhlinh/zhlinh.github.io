@@ -1,7 +1,7 @@
 ---
 layout: article
 permalink: /about/
-title: About
+title: "About Me"
 ads: true
 ---
 

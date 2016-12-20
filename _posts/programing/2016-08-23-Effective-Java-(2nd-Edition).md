@@ -1,11 +1,12 @@
 ---
 layout: article
 title:  "Effective Java (2nd Edition)"
-categories: archive
+categories: programing
 tags: [java, reading]
 toc: true
 image:
-    teaser: /teaser/2016-08-23-Effective-Java-(2nd-Edition).jpg
+    teaser: /programing/2016-08-23-Effective-Java-(2nd-Edition)/teaser.jpg
+
 date: 2016-08-23
 ---
 

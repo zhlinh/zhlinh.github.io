@@ -5,6 +5,12 @@
   excerpt:
   image:
 
+- title: Programing
+  url: /programing/
+
+- title: Research
+  url: /research/
+ 
 - title: Archive
   url: /archive/
   

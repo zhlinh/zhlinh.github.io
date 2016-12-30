@@ -184,7 +184,7 @@ XOR的FEC的形式，提供了简单的N+1冗余。 FEC通常用于提高链路�
 ![Pic-2.12-Forward-Error-Correction](/images/research/2016-12-20-QUIC-Wire-Layout-Specification/Pic-2.12-Forward-Error-Correction.jpg)
 <center>图2.12 Forward Error Correction</center>
 
-### 参考文献
+## 参考文献
 
 - [QUIC wire specification](https://docs.google.com/document/d/1WJvyZflAO2pq77yOLbp9NsGjC1CHetAXV8I0fQe-B_U/edit?usp=sharing)
 - [QUIC tech talk - QUIC: next generation multiplexed transport over UDP](https://www.youtube.com/watch?v=hQZ-0mXFmk8)

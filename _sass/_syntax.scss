@@ -50,11 +50,11 @@ pre.highlight {
 
 .o { color: #000000; font-weight: bold }                             // Operator
 
-.c { color: #999988; font-style: italic }                            // Comment
-.cm { color: #999988; font-style: italic }                           // Comment.Multiline
-.cp { color: #999999; font-weight: bold; font-style: italic }        // Comment.Preproc
-.c1 { color: #999988; font-style: italic }                           // Comment.Single
-.cs { color: #999999; font-weight: bold; font-style: italic }        // Comment.Special
+.c { color: #999988 }                            // Comment
+.cm { color: #999988 }                           // Comment.Multiline
+.cp { color: #999999; font-weight: bold }        // Comment.Preproc
+.c1 { color: #999988 }                           // Comment.Single
+.cs { color: #999999; font-weight: bold }        // Comment.Special
 
 
 .gd { color: #000000; background-color: #ffdddd }                    // Generic.Deleted

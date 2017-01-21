@@ -31,7 +31,7 @@ QUIC的一个重要目标是通过快速的实验部署向人们展示更好的�
 [Chromium QUIC](https://www.chromium.org/quic)网页上提供了更详细的文档：
 
 - 加密和传输握手: [QUIC-CRYPTO](https://docs.google.com/document/d/1g5nIXAIkN_Y-7XJW5K45IblHd_L2f5LTaDUDwvZ5L6g/edit?usp=sharing)
-- 前向纠错和拥塞控制: [draft-iyengar-quic-loss-recovery](https://tools.ietf.org/html/draft-tsvwg-quic-loss-recovery)
+- 丢失重传和拥塞控制: [draft-iyengar-quic-loss-recovery](https://tools.ietf.org/html/draft-tsvwg-quic-loss-recovery)
 - 早期部署的QUIC标准化建议: [draft-hamilton-quic-transp](https://tools.ietf.org/html/draft-tsvwg-quic-protocol)
 
 ---
@@ -173,22 +173,10 @@ TCP算法维护拥塞窗口大小（传输过程中的的分组计数）和平�
 ![Pic-2.11-Packet-Pacing](/images/research/2016-12-20-QUIC-Wire-Layout-Specification/Pic-2.11-Packet-Pacing.jpg)
 <center>图2.11 Packet Pacing</center>
 
-### 2.8 前向纠错
-
-前向纠错（又称FEC）允许传输额外的字节为分组丢失的情况提供冗余。 QUIC实现了基于
-XOR的FEC的形式，提供了简单的N+1冗余。 FEC通常用于提高链路层可靠性（例如在Wifi中），
-并且长期以来一直想将FEC添加到端到端传输层中，但这在TCP中是非常复杂的。 因此，QUIC
-提供了一个理想的环境对FEC进行实验，并确定在什么情况下它能够提供等待时间或可靠性等
-方面的优点。
-
-![Pic-2.12-Forward-Error-Correction](/images/research/2016-12-20-QUIC-Wire-Layout-Specification/Pic-2.12-Forward-Error-Correction.jpg)
-<center>图2.12 Forward Error Correction</center>
-
 ## 参考文献
 
 - [QUIC wire specification](https://docs.google.com/document/d/1WJvyZflAO2pq77yOLbp9NsGjC1CHetAXV8I0fQe-B_U/edit?usp=sharing)
 - [QUIC tech talk - QUIC: next generation multiplexed transport over UDP](https://www.youtube.com/watch?v=hQZ-0mXFmk8)
-- [QUIC FEC v1](https://docs.google.com/document/d/1Hg1SaLEl6T4rEU9j-isovCo8VEjjnuCPTcLNJewj7Nk/edit?usp=sharing)
 
 ---
 The End.

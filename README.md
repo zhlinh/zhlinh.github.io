@@ -152,4 +152,7 @@ links from the definition in `_data/navigation.yml` and `_data/navigation-slidin
 
 ## LICENSE
 
-[The MIT License (MIT)](http://opensource.org/licenses/MIT)
+The content of this project itself is licensed under the
+[Creative Commons Attribution 4.0 license - Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode),
+and the underlying source code used to format and display that content is
+licensed under the [MIT license](https://opensource.org/licenses/mit-license.php).

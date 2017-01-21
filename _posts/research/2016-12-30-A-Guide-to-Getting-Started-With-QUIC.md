@@ -16,8 +16,7 @@ proto-quic包含了QUIC所需的Chromium代码和相关依赖。因此可以使�
 
 QUIC并不是官方支持的Google产品。目前由一些QUIC开发人员作为一个编外计划保持更新
 （理论上更新周期为一周）。最糟糕的情况下，如果Google的优先级改变，不再支持一个
-独立的QUIC库。但proto-quic是完全开源的，任何感兴趣的社区可以克隆仓库并继续自己
-的更新。
+独立的QUIC库。但proto-quic是完全开源的，任何感兴趣的社区可以克隆仓库并继续更新。
 
 目前，唯一支持的平台是Linux（并且目前仅测试了Ubuntu版本），但Windows和iOS 应该
 很快就会支持。
@@ -573,10 +572,14 @@ HTTP头部的编辑方法如下，
 - 添加 (如果没有的话): X-Original-Url: https://www.example.org/index.html [必须加上，否则客户端访问时会出现404错误]
 
 即index.html的内容至少为以下的格式：
+(实际上www.example.org文件夹内的所有文件(包括隐藏文件)的内容也至少为以下格式，
+X-Original-Url的路径根据相应文件的具体的路径和文件名而定，
+否则之后运行服务器程序时会因无法取出HTTP响应头部信息出错)
 HTTP/1.1 200 OK^M
 X-Original-Url: https://www.example.org/index.html^M
 ^M     [一个空行划分HTTP头部和正文]
 <!doctype html>...，如果是二进制文件或普通文本，则为二进制内容或普通的文本内容
+(其中^M表示Windows的CR/LF换行，在vi中在编辑模式下可以用"ctrl+v, ctrl+m"输入，而非普通的可见字符。)
 ~~~
 
 ---
@@ -646,6 +649,11 @@ $　certutil -d $HOME/.pki/nssdb -A -t "P,," -n quic-server -i out/leaf_cert.pem
 $ ./out/Debug/quic_server --quic_in_memory_cache_dir=$HOME/quic-data/www.example.org --certificate_file=net/tools/quic/certs/out/leaf_cert.pem --key_file=net/tools/quic/certs/out/leaf_cert.pkcs8  --port=6121 --v=1（如果需要显示更多的log信息，则使用该参数）
 
 注意：./out/Debug/quic_server是服务器程序，后面的均为参数。
+
+如果程序立即停止运行而不是处于Listening状态，则需要根据--v=1显示的信息来进行调整。
+重点检查1： www.example.org文件夹内的所有文件(包括隐藏文件)的内容必须保持3.2所提格式。
+#查看www.example.org文件夹内所有文件的命令:
+$ ls -a /home/<user name>/quic-data/www.example.org/
 ~~~
 
 quic_server程序的其他可选参数:
@@ -671,9 +679,10 @@ $ ./out/Debug/quic_client --host=127.0.0.1 --port=6121 https://www.example.org/i
 
 注意：./out/Debug/quic_client是客户端程序，后面的均为参数。
 如果让服务器的端口默认为6121，您必须指定客户端端口，因为它默认为80。 此外，如果您的本地计算机有多个环回地址（如果使用IPv4和IPv6），您必须选择一个特定的地址。
+
 如果仍然有错误如404或500，则需要根据--v=1显示的信息来进行调整。
 重点检查1： quic_client请求的文件https://www.example.org/index.html，必须与在服务器目录中的文件index.html中的HTTP头部 X-Original-Url: https://www.example.org/index.html^M 相对应
-(其中^M表示Linux的换行，在vi中在编辑模式下可以用"ctrl+v, ctrl+m"输入，而非普通的可见字符。)
+(其中^M表示Windows的CR/LF换行，在vi中在编辑模式下可以用"ctrl+v, ctrl+m"输入，而非普通的可见字符。)
 重点检查2:  服务器是否生成了证书，客户端是否添加了相应证书
 重点检查3:  服务器目录中的文件index.html中的HTTP头部的第一行必须为HTTP/1.1 200 OK^M，且HTTP头部与正文之间必须相隔一个空行。
 ~~~
@@ -708,6 +717,11 @@ Options:
 如果需要传输视频、图像、文本等任何其他文件(包括index.html)，则需要在该文件的头部加上Http头部。
 例如添加了bunny_480_100kbit_dash.mp4到quic-data/www.example.org目录下。
 
+注意：www.example.org文件夹内的所有文件(包括隐藏文件)的内容也必须保持以下格式，
+否则之后运行服务器程序时可能因无法取出HTTP响应头部信息出错。
+#查看www.example.org文件夹内所有文件的命令:
+$ ls -a /home/<user name>/quic-data/www.example.org/
+
 # 注意保证 文件夹 的默认权限为775，非可执行文件 的默认权限为664。
 $ sudo chmod 775 /home/<user name>/quic-data/www.example.org/
 $ sudo chmod 664 /home/<user name>/quic-data/www.example.org/bunny_480_100kbit_dash.mp4
@@ -720,7 +734,7 @@ X-Original-Url: https://www.example.org/bunny_480_100kbit_dash.mp4^M
 ------------------------------End-------------------------------------------
 
 注意Http的头部(Head)与正文(Body)需要相隔一个空行，其中上述两个头部内容是必须的，当然还可以添加其他的Http头部信息。
-其中^M表示Linux的换行，在vi中在编辑模式下可以用"ctrl+v, ctrl+m"输入，而非普通的可见字符。
+其中^M表示Windows的CR/LF换行，在vi中在编辑模式下可以用"ctrl+v, ctrl+m"输入，而非普通的可见字符。
 注意Http头部中不能含有"Transfer-Encoding: chunked" 和 "Alternate-Protocol: ..."。
 
 # 服务器端不需要变动[proto-quic/src目录下]：
@@ -830,7 +844,6 @@ Request succeeded (200).
 
 ### 5.3 也可以使用chrome浏览器作为客户端来请求文件
 
-
 Ubuntu 64bit的google-chrome浏览器下载地址:
 [google-chrome-stable_current_amd64.deb](https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb)。
 
@@ -859,6 +872,12 @@ $ google-chrome \
 
 注意：如果改动了网页的内容，然后浏览器访问没有变化，则可能是浏览器缓存的问题。可以到浏览器里清空缓存(Clear browsing data - Cached images and files)。
 ~~~
+
+
+## 参考文献
+
+- [proto-quic - README](https://github.com/google/proto-quic/blob/master/README.md)
+- [Playing with QUIC](https://www.chromium.org/quic/playing-with-quic)
 
 ---
 The End.

@@ -5,7 +5,7 @@ categories: research
 tags: [QUIC, Google]
 toc: true
 image:
-    teaser: /research/2016-12-20-QUIC-Wire-Layout-Specification/teaser.jpg
+    teaser: research/2016-12-20-QUIC-Wire-Layout-Specification/teaser.jpg
 date: 2016-12-20
 ---
 

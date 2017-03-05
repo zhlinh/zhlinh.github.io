@@ -5,7 +5,7 @@ categories: research
 tags: [QUIC, Google, Codes]
 toc: true
 image:
-    teaser: /research/2017-01-21-How-to-Write-QUIC-Endpoint-Program/teaser.jpg
+    teaser: research/2017-01-21-How-to-Write-QUIC-Endpoint-Program/teaser.jpg
 date: 2017-01-21
 ---
 

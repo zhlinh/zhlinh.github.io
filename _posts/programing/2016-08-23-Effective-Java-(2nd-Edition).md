@@ -5,7 +5,7 @@ categories: programing
 tags: [java, reading]
 toc: true
 image:
-    teaser: /programing/2016-08-23-Effective-Java-(2nd-Edition)/teaser.jpg
+    teaser: programing/2016-08-23-Effective-Java-(2nd-Edition)/teaser.jpg
 
 date: 2016-08-23
 ---

@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/zhlinh/zhlinh.github.io.svg?branch=master)](https://travis-ci.org/zhlinh/zhlinh.github.io)
 
-ZHLINH'S TECH BLOG based on the template [Skinny Bones](http://mmistakes.github.io/skinny-bones-jekyll/).
+ZHLINH'S TECH BLOG based on the template [Skinny Bones](https://mmistakes.github.io/skinny-bones-jekyll/).
 
 ![screenshot of Skinny Bones](skinny-bones-template.jpg)
 

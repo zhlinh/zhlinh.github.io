@@ -5,7 +5,7 @@ categories: research
 tags: [QUIC, Google, tutorial]
 toc: true
 image:
-    teaser: /research/2016-12-30-A-Guide-to-Getting-Started-With-QUIC/teaser.jpg
+    teaser: research/2016-12-30-A-Guide-to-Getting-Started-With-QUIC/teaser.jpg
 date: 2016-12-30
 ---
 

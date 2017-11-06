@@ -210,7 +210,7 @@ Public class DriverTest extends TestCase {
 
 单例模式(Singleton Pattern)指的是确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例。其实现方式可以分为饿汉式和懒汉式。
 
-![1-singleton](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/1-singleton.png)
+![1-singleton](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/1-singleton.png)
 
 单例模式的优点有：
 
@@ -225,7 +225,7 @@ Public class DriverTest extends TestCase {
 
 工厂方法模式指的是定义一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类。
 
-![2-factory](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/2-factory.png)
+![2-factory](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/2-factory.png)
 
 工厂方法模式的优点有：
 
@@ -246,7 +246,7 @@ Public class DriverTest extends TestCase {
 
 抽象工厂模式指的是为创建一组相关的或相互依赖的对象提供一个接口，而且无需指定它们的具体类。
 
-![3-abstract-factory](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/3-abstract-factory.png)
+![3-abstract-factory](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/3-abstract-factory.png)
 
 抽象工厂模式的优点有：
 
@@ -261,7 +261,7 @@ Public class DriverTest extends TestCase {
 
 模板方法模式值得是定义一个操作中的算法框架，而将一些步骤的实现延迟到子类中。使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。
 
-![4-template](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/4-template.png)
+![4-template](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/4-template.png)
 
 模板方法模式的抽象模板类一般包含两类方法，一种是基本方法，由子类实现，并且在模板方法中被调用；另一种是抽象方法，可以有一个或多个，一般是一个具体方法，也就是一个框架，实现对基本方法的调度，完成固定的逻辑。模板方法一般会加上final关键字，不允许覆写，以防恶意操作。
 
@@ -281,7 +281,7 @@ Public class DriverTest extends TestCase {
 
 建造者模式也称为生成器模式，指的是将一个复杂对象的构建和它的表示分离，使得同样的构建过程可以创建不同的表示。
 
-![5-builder](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/5-builder.png)
+![5-builder](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/5-builder.png)
 
 通常，建造者模式有4个角色，产品类，抽象建造者，建造者的实现类（如可以传入产品的模块顺序或数量配置，并生产产品），导演类（如负责安排已有模块的顺序或数量，然后告诉建造者开始建造）。
 
@@ -303,7 +303,7 @@ AOP（Aspect Oriented Programming，面向横切面编程）
 
 代理模式又称为委托模式，指的是为其他对象提供一种代理以控制对这个对象的访问。其他的许多模式，如状态模式、策略模式和访问者模式本质上是在更特殊的场合使用了代理模式。
 
-![6-proxy](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/6-proxy.png)
+![6-proxy](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/6-proxy.png)
 
 代理类不仅可以实现主题接口，还可以为真实角色预处理信息、过滤信息、消息转发、事后处理信息等功能。
 
@@ -327,7 +327,7 @@ AOP（Aspect Oriented Programming，面向横切面编程）
 
 原型模式指的是用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。即不通过new关键字来产生一个对象，而是通过对象复制来实现。可以理解为一个对象的产生可以不由零起步，而是由正本通过二进制内存拷贝创建多个副本，然后再修改为生产需要的对象。
 
-![7-prototype](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/7-prototype.png)
+![7-prototype](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/7-prototype.png)
 
 原型模式的核心是一个clone方法，通过该方法进行对象的拷贝，Java提供了一个Cloneable接口来标识这个对象是可拷贝的，且还必须覆写clone方法。为什么说Cloneable接口仅作为标识还称clone方法为覆写，因为clone方法是Object类的，而每个类都默认继承了Object类。
 
@@ -350,7 +350,7 @@ AOP（Aspect Oriented Programming，面向横切面编程）
 
 中介者模式指的是用一个中介对象封装一系列的对象交互，中介者使各对象不需要显示地相互作用，从而使其耦合松散，并且可以独立地改变它们之间的交互。中介者类似于星型网络拓扑中的中心交换机连接各计算机。也称为调停者模式。
 
-![8-mediator](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/8-mediator.png)
+![8-mediator](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/8-mediator.png)
 
 中介者模式的优点就是减少了类间的依赖，把原有的一对多的依赖变成了一对一的依赖，同事类只依赖中介者，减少了依赖，当然同时也降低了类间的耦合。
 
@@ -364,7 +364,7 @@ AOP（Aspect Oriented Programming，面向横切面编程）
 
 命令模式指的是将一个请求封装成一个对象，从而让你使用不同的请求把客户端参数化，将多个请求排队或者记录请求日志，也可以提供命令的撤销和恢复功能。
 
-![9-command](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/9-command.png)
+![9-command](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/9-command.png)
 
 命令模式的优点有：
 
@@ -380,7 +380,7 @@ AOP（Aspect Oriented Programming，面向横切面编程）
 
 责任链模式指的是使多个对象都有机会处理请求，从而避免了请求的发送者和接收者的耦合关系，将这些接收者对象连成一条链，并沿着这条链传递请求，知道有对象处理它为止。注意请求是由接收者对象来决定是否传递的，而不是在高层模块中判断。
 
-![10-chain-of-responsibility](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/10-chain-of-responsibility.png)
+![10-chain-of-responsibility](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/10-chain-of-responsibility.png)
 
 责任链模式的优点是将请求和处理分开，请求者不用知道是谁处理的，只问了责任链中的第一个接收者，只需要得到一个回复，而关于请求是否传递则由接收者来传递。同样的，接收者也不用知道请求的全貌。两者解耦，提高系统的灵活性。
 
@@ -392,7 +392,7 @@ AOP（Aspect Oriented Programming，面向横切面编程）
 
 装饰模式指的是动态地给一个对象添加一些额外的职责。就增加功能来说，装饰模式比由对象直接生成子类更为灵活。装饰模式可以任意选择所需要添加的装饰，下一次传递的被装饰对象为上一次装饰完毕的对象，都继承自同一个Component抽象类。装饰模式也可看成是特殊的代理模式。
 
-![11-decorator](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/11-decorator.png)
+![11-decorator](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/11-decorator.png)
 
 装饰模式的优点有：
 
@@ -409,7 +409,7 @@ AOP（Aspect Oriented Programming，面向横切面编程）
 
 策略模式指的是定义一组算法，将每个算法都封装起来，并且使它们之间可以互换。策略模式也是一种特殊的代理模式，使用一个代理类（Context封装类）来代理多个对象（Strategy抽象类的具体实现）。
 
-![12-strategy](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/12-strategy.png)
+![12-strategy](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/12-strategy.png)
 
 策略模式的优点有：
 
@@ -425,7 +425,7 @@ AOP（Aspect Oriented Programming，面向横切面编程）
 
 适配器模式指的是将一个类的接口变换成客户端所期待的另一种接口，从而使原本不匹配的两个类能够共同工作。适配器模式又称为变压器模式。适配器模式也是包装模式的一种，包装模式还有装饰模式。
 
-![13-adapter](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/13-adapter.png)
+![13-adapter](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/13-adapter.png)
 
 适配器模式的优点有：
 
@@ -440,7 +440,7 @@ AOP（Aspect Oriented Programming，面向横切面编程）
 
 迭代器模式指的是提供一种方法访问一个容器对象中各个元素，而又不需要暴露该对象的内部细节。迭代器是为容器服务的，能容纳对象的所有类型都可以称之为容器，例如Collection类型、Set类型等。
 
-![14-interator](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/14-interator.png)
+![14-interator](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/14-interator.png)
 
 Java的的迭代器接口java.util.iterator有三个方法hasNext、next和remove。迭代器的remove方法应该完成两个逻辑：一是删除当前元素，而是当前游标指向下一个元素。而抽象容器类必须提供一个方法来创建并返回具体迭代器角色，Java中通常为iterator方法。
 
@@ -450,7 +450,7 @@ Java的的迭代器接口java.util.iterator有三个方法hasNext、next和remov
 
 组合模式指的是将对象组合成树形结构以表示“部分-整体”的层次结构，使得用户对单个对象和组合对象的使用具有一致性。
 
-![15-composite](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/15-composite.png)
+![15-composite](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/15-composite.png)
 
 组合模式的优点有：
 
@@ -467,7 +467,7 @@ Java的的迭代器接口java.util.iterator有三个方法hasNext、next和remov
 
 观察者模式指的是定义对象间一对多的依赖关系，使得当发布者对象的状态改变，则所有它依赖的订阅对象都会得到通知并自动更新。观察者模式也叫做发布/订阅模式。
 
-![16-observer](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/16-observer.png)
+![16-observer](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/16-observer.png)
 
 观察者模式的优点有：
 
@@ -484,7 +484,7 @@ EJB(Enterprise JavaBean)中有3个类型的Bean，分别为Session Bean、Entity
 
 门面模式指的是要求一个子系统的外部与其内部的通信必须通过一个统一的对象进行。门面模式提供一个高层次的接口使得子系统更容易使用。门面模式也叫做外观模式。
 
-![17-facade](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/17-facade.png)
+![17-facade](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/17-facade.png)
 
 门面模式注重统一的对象，也就是提供一个门面对象作为访问子系统的接口，除了这个接口不允许任何访问子系统的行为发生。
 
@@ -504,7 +504,7 @@ EJB(Enterprise JavaBean)中有3个类型的Bean，分别为Session Bean、Entity
 
 备忘录模式指的是在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态，这样以后就可以将该对象恢复到原先保存的状态。
 
-![18-memento](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/18-memento.png)
+![18-memento](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/18-memento.png)
 
 备忘录模式的备忘录角色可以由原型模式的clone方法创建。发起人角色只要实现Cloneable接口就成。这样发起人角色融合就融合发起人角色和备忘录角色，此时备忘录管理员角色直接依赖发起人角色。当然也可以再精简掉备忘录管理员角色，使发起人自主备份和恢复。这不是“在该对象之外保存这个状态”，而是把状态保存在了发起人内部，但这仍然可视为备忘录模式的一种。此外使用原型模式还必须要考虑深拷贝和浅拷贝的问题，所以Clone方式的备忘录模式只适用于较简单的场景。
 
@@ -516,7 +516,7 @@ EJB(Enterprise JavaBean)中有3个类型的Bean，分别为Session Bean、Entity
 
 访问者模式指的是封装一些作用于某种数据结构中的各元素的操作，它可以在不改变数据结构的前提下定义作用于这些元素的新的操作。
 
-![19-visitor](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/19-visitor.png)
+![19-visitor](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/19-visitor.png)
 
 访问者模式的优点有：
 
@@ -633,7 +633,7 @@ public class Client {
 
 状态模式指的是允许一个对象在其内部状态改变时改变它的行为，从外部看起来就好像这个对象对应的类发生了改变一样。状态模式是一种对象行为型模式。
 
-![20-state](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/20-state.png)
+![20-state](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/20-state.png)
 
 状态模式由状态角色和环境角色组成。
 
@@ -653,7 +653,7 @@ public class Client {
 
 解释器模式是一种按照规定语法进行解析的方案，在现有的项目中使用较少。给定一门语言，定义它的文法的一种表示(表达式)，并定义一个解释器，该解释器使用该表示啦解释语言中的句子。
 
-![21-interpreter](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/21-interpreter.png)
+![21-interpreter](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/21-interpreter.png)
 
 表达式分为终结符表达式(如某个变量，只关心自身的结果)和非终结符表达式(如加减乘除法则，只关心左右或附近表达式的结果)，其实就是逐层递归的意思。
 
@@ -667,7 +667,7 @@ public class Client {
 
 享元模式(Flyweight Pattern)是池技术的重要实现方式，使用共享对象可有效支持大量的细粒度的对象，从而避免内存溢出。
 
-![22-flyweight](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/22-flyweight.png)
+![22-flyweight](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/22-flyweight.png)
 
 细粒度对象的信息分为两个部分：内部状态(intrinsic)和外部状态(extrinsic)。
 
@@ -689,7 +689,7 @@ Java中String类的intern方法就使用了享元模式。
 
 桥梁模式也叫桥接模式，将抽象和实现解耦，使得二者可以独立地变化。抽象化角色(分为抽象类和具体类)引用实现角色(同样分为抽象类和具体类)，或者说抽象角色的部分实现是由实现角色完成的。抽象化对象一般在构造函数中指定(聚合)实现对象。
 
-![23-bridge](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-\(2nd-Edition\)/23-bridge.png)
+![23-bridge](/images/programing/2017-11-05-The-Zen-of-Design-Patterns-(2nd-Edition)/23-bridge.png)
 
 桥梁模式的优点是将抽象和实现分离，解决继承的缺点，不再绑定在一个固定的抽象层次上，拥有更良好的扩展能力，用户不必关心实现细节。
 

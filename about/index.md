@@ -10,12 +10,12 @@ ads: true
 ## Who am I
 
 * I’m a coding lover, fan of reading, movies and cooking.
-* Being a student at Xidian University now.
+* Being a developer at Tencent.
 * My GitHub page: [zhlinh at GitHub](https://github.com/zhlinh)
 
 ## Education
 
-* Post Graduate Grade 3
+* Post Graduate
 * Communication Engineering
 * Xidian University
 

@@ -63,7 +63,7 @@ adb shell "su -c 'chmod 777 /data/local/tcpdump'"
 
 ## 5. 进行抓包
 
-执行`./cap_rt.sh`脚本（见附件），便可在wireshark中看到实时的抓包情况，点击ctrl-c可以停止抓包，在wireshark中可以保存成pcapng文件，当然也可以手动执行该脚本的指令进行抓包
+将以下的指令保存成`cap_rt.sh`脚本并执行，便可在wireshark中看到实时的抓包情况，点击ctrl-c可以停止抓包，在wireshark中可以保存成pcapng文件
 
 ```bash
 # 如果localhost的31337端口被占用，请更换其他端口，当然一般都不会
@@ -88,4 +88,4 @@ zhlinh
 
 Email: zhlinhng@gmail.com
 
-2018-12-31
+2018-12-27

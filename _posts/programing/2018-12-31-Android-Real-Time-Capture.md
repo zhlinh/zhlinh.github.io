@@ -43,7 +43,7 @@ make install
 
 ## 3. 安装tcpdump
 
-[tcpdump](https://www.androidtcpdump.com/android-tcpdump/downloads)用于抓包，可运行`./cap_install.sh`脚本（见附件）来安装，注意同文件夹下需要有tcpdump执行文件。若提示安装结束，则表明安装成功，需要adb环境。windows上可能需要cygwin或gitBash等工具来执行linux脚本，当然也可以手动执行该脚本的指令进行安装
+[tcpdump](https://www.androidtcpdump.com/android-tcpdump/downloads)用于抓包，将以下指令保存成`cap_install.sh`脚本并执行，注意同文件夹下需要有tcpdump执行文件。若无错误提示，则表明安装成功，需要adb环境。windows上可能需要cygwin或gitBash等工具来执行linux脚本。
 
 ```bash
 adb push tcpdump /mnt/sdcard/tcpdump

@@ -5,7 +5,7 @@ title: "About Me"
 ads: true
 ---
 
-> Be the change if you want to see the world.
+> Be the change you want to see in the world.
 
 ## Who am I
 

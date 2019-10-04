@@ -31,8 +31,8 @@ QUIC的一个重要目标是通过快速的实验部署向人们展示更好的�
 [Chromium QUIC](https://www.chromium.org/quic)网页上提供了更详细的文档：
 
 - 加密和传输握手: [QUIC-CRYPTO](https://docs.google.com/document/d/1g5nIXAIkN_Y-7XJW5K45IblHd_L2f5LTaDUDwvZ5L6g/edit?usp=sharing)
-- 丢失重传和拥塞控制: [draft-iyengar-quic-loss-recovery](https://tools.ietf.org/html/draft-tsvwg-quic-loss-recovery)
-- 早期部署的QUIC标准化建议: [draft-hamilton-quic-transp](https://tools.ietf.org/html/draft-tsvwg-quic-protocol)
+- 丢失重传和拥塞控制: [draft-iyengar-quic-loss-recovery](https://tools.ietf.org/html/draft-tsvwg-quic-loss-recovery-01)
+- 早期部署的QUIC标准化建议: [draft-hamilton-quic-transp](https://tools.ietf.org/html/draft-tsvwg-quic-protocol-02)
 
 ---
 

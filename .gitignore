@@ -9,3 +9,4 @@ _asset_bundler_cache
 vendor
 path
 .bundle
+.jekyll-cache/

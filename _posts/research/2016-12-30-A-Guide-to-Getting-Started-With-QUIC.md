@@ -25,7 +25,7 @@ QUIC并不是官方支持的Google产品。目前由一些QUIC开发人员作为
 
 测试的proto-quic版本为：[Updating to 56.0.2912.0 (#15)](https://github.com/google/proto-quic/commit/0db5f234b86699c182394bb261ee226ab800b60f)
 
-~~~bash
+```bash
 $ git reset --hard 0db5f234b86699c182394bb261ee226ab800b60f
 $ git log
 
@@ -38,13 +38,13 @@ Date:   Tue Nov 8 18:44:44 2016 +0800
     * Updating to 56.0.2912.0
 
     * Updating to 56.0.2912.0
-~~~
+```
 
 ---
 
 ## 1 下载项目仓库并安装相关依赖*
 
-~~~bash
+```bash
 # 下载项目仓库
 $ git clone https://github.com/google/proto-quic.git
 
@@ -59,7 +59,7 @@ $ export PATH=$PATH:`pwd`/depot_tools
 
 # 安装相关依赖(可能会遇到各种问题，下面会作详细说明)
 $ ./proto_quic_tools/sync.sh
-~~~
+```
 
 安装相关依赖时需要下载Chrome OS fonts，binutils等，可能需要使用代理。
 
@@ -76,7 +76,7 @@ Chrome OS fonts和binutils。则先手动下载并解压相关文件到相应位
 chrome fonts的安装脚本位于`proto-quic/src/build/linux/install-chromeos-fonts.py`，
 其主要代码(若不想看代码，可跳过，直接看之后的总结)如下。
 
-~~~python
+```python
 #!/usr/bin/env python
 # Copyright 2013 The Chromium Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
@@ -188,7 +188,7 @@ def main(args):
 
 if __name__ == '__main__':
   sys.exit(main(sys.argv[1:]))
-~~~
+```
 
 总结一下安装Chrome OS fonts所需的必要步骤：
 
@@ -197,27 +197,27 @@ if __name__ == '__main__':
 下载下面两个文件到`/usr/local/share/fonts/chromeos`目录中。(注意：如下载地址有变化，
 以`proto-quic/src/build/linux/install-chromeos-fonts.py`的内容为准)
 
-~~~bash
+```bash
 ['https://commondatastorage.googleapis.com/chromeos-localmirror/distfiles/notofonts-20160310.tar.bz2',
 'https://commondatastorage.googleapis.com/chromeos-localmirror/distfiles/robotofonts-2.132.tar.bz2']
-~~~
+```
 
-~~~bash
+```bash
 # 可用浏览器下载(推荐)到/usr/local/share/fonts/chromeos目录中，或者在终端中wget下载
 $ wget --no-check-certificate https://commondatastorage.googleapis.com/chromeos-localmirror/distfiles/notofonts-20160310.tar.bz2 -O /usr/local/share/fonts/chromeos/notofonts-20160310.tar.bz2
 $ wget --no-check-certificate https://commondatastorage.googleapis.com/chromeos-localmirror/distfiles/robotofonts-2.132.tar.bz2 -O /usr/local/share/fonts/chromeos/robotofonts-2.132.tar.bz2
-~~~
+```
 
 ##### 必要步骤 2 - 解压tarball
 
-~~~bash
+```bash
 $ tar -vxf --no-same-owner --no-same-permissions /usr/local/share/fonts/chromeos/notofonts-20160310.tar.bz2 -C /usr/local/share/fonts/chromeos/
 $ tar -vxf --no-same-owner --no-same-permissions /usr/local/share/fonts/chromeos/robotofonts-2.132.tar.bz2 -C /usr/local/share/fonts/chromeos/
-~~~
+```
 
 ##### 必要步骤 3 - 写stamp文件
 
-~~~bash
+```bash
 $ sudo python [进入python终端后输入如下内容]
 >>> URLS = ['https://commondatastorage.googleapis.com/chromeos-localmirror/distfiles/notofonts-20160310.tar.bz2',
            'https://commondatastorage.googleapis.com/chromeos-localmirror/distfiles/robotofonts-2.132.tar.bz2']
@@ -226,7 +226,7 @@ $ sudo python [进入python终端后输入如下内容]
       s.write('\n'.join(URLS))
 
 >>> exit()  [退出python终端]
-~~~
+```
 
 此时，Chrome OS fonts的必要安装步骤就完成了，`install-chromeos-fonts.py`文件中还
 删除了解压后的tarball压缩包，并在同一目录下生成一个README文件。
@@ -236,7 +236,7 @@ $ sudo python [进入python终端后输入如下内容]
 binutils的安装脚本位于`proto-quic/src/third_party/binutils/download.py`，
 其主要代码(若不想看代码，可跳过，直接看之后的总结)如下。
 
-~~~bash
+```bash
 #!/usr/bin/env python
 # Copyright 2014 The Chromium Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
@@ -400,7 +400,7 @@ def main(args):
 
 if __name__ == '__main__':
   sys.exit(main(sys.argv[1:]))
-~~~
+```
 
 总结一下安装binutils所需的必要步骤：
 
@@ -408,15 +408,14 @@ if __name__ == '__main__':
 
 查看计算机的CPU架构
 
-~~~bash
+```bash
 # 若显示的是x86_64，则CPU架构为x64，若显示ia32，则CPU架构为ia32
 $ arch
-~~~
+```
 
 以下的内容以x64为例，即目标文件夹为`proto-quic/src/third_party/binutils/Linux_x64/`
 (若为ia32，则目标文件夹为`proto-quic/src/third_party/binutils/Linux_ia32/`，
 注意修改下列的相关内容)。
-
 
 x64架构的下载地址为`https://storage.googleapis.com/chromium-binutils/d9064388bed0e7225b1366d80b59289b1509d7c2`
 (若为ia32架构，则下载地址为`https://storage.googleapis.com/chromium-binutils/24f937cfdad77bdcd6ad8cacc542d806f3eb4b0f`，
@@ -427,36 +426,36 @@ x64架构的下载地址为`https://storage.googleapis.com/chromium-binutils/d90
 下载binutil文件到`proto-quic/src/third_party/binutils/Linux_ia32(或Linux_x64)/`
 目录中，并命名为`binutils.tar.bz2`。以x64架构为例。
 
-~~~bash
+```bash
 # 可用浏览器下载(推荐)到proto-quic/src/third_party/binutils/Linux_ia32(或Linux_x64)目录中，或者在终端中wget下载
 $ cd proto-quic/src/third_party/binutils/Linux_x64   (x64架构)
 (ia32架构的为: cd proto-quic/src/third_party/binutils/Linux_ia32)
 
 $ wget --no-check-certificate https://storage.googleapis.com/chromium-binutils/d9064388bed0e7225b1366d80b59289b1509d7c2 -O ./binutils.tar.bz2  (x64架构)
 (ia32架构的为: wget --no-check-certificate https://storage.googleapis.com/chromium-binutils/24f937cfdad77bdcd6ad8cacc542d806f3eb4b0f -O ./binutils.tar.bz2)
-~~~
+```
 
 ##### 必要步骤 2 - 删除并新建outdir文件夹
 
 outdir为`proto-quic/src/third_party/binutils/Linux_ia32(或Linux_x64)/Release/`
 (注意区分大小写，Release的首字母大写)
 
-~~~bash
+```bash
 # 先切换到[proto-quic/src/third_party/binutils/Linux_ia32(或Linux_x64)文件夹中]
 $ rm -R Release
 $ mkdir Release
-~~~
+```
 
 ##### 必要步骤 3 - 解压tarball文件到outdir文件夹中
 
-~~~bash
+```bash
 # 先切换到[proto-quic/src/third_party/binutils/Linux_ia32(或Linux_x64)文件夹中]
 $ tar -vaxf ./binutils.tar.bz2 -C ./Release/
-~~~
+```
 
 ##### 必要步骤 4 - 将sha1file的字符串内容写入到stampfile中
 
-~~~bash
+```bash
 $ sudo python [进入python终端后输入如下内容]
 >>> sha1file = '/home/vmu/proto-quic/src/third_party/binutils/Linux_x64/binutils.tar.bz2.sha1' (vmu为系统的用户名，需要自行替换，绝对路径)
 (ia32架构的为 stampfile = '/home/vmu/proto-quic/src/third_party/binutils/Linux_ia32/binutils.tar.bz2.sha1' (vmu为系统的用户名，需要自行替换，绝对路径))
@@ -473,7 +472,7 @@ $ sudo python [进入python终端后输入如下内容]
       f.write('\n')
 
 >>> exit() [退出python终端]
-~~~
+```
 
 此时，binutils的安装步骤就完成了。
 
@@ -481,7 +480,7 @@ $ sudo python [进入python终端后输入如下内容]
 
 成功时会出现：
 
-~~~bash
+```bash
 No missing packages, and the packages are up to date.
 
 Installing Chrome OS fonts.
@@ -504,13 +503,13 @@ Success!
 Downloading 1 files took 61.413792 second(s)
 Extracting /home/vmu/proto-quic/src/third_party/binutils/Linux_x64/binutils.tar.bz2
 done.
-~~~
+```
 
 ---
 
 ## 2 生成QUIC的client，server和tests*
 
-~~~bash
+```bash
 # 由proto-quic进入proto-quic/src目录
 $ cd src
 
@@ -518,14 +517,14 @@ $ cd src
 $ gn gen out/Debug && ninja -C out/Debug quic_client quic_server net_unittests
 (或者(如未按第一步添加环境变量) ../depot_tools/gn gen out/Debug && ../depot_tools/ninja -C out/Debug quic_client quic_server net_unittests
 [gn位于proto-quic/depot_tools，输出目录为out/Default或out/Debug等均可，名字无要求，后文中为out/Debug])
-~~~
+```
 
 成功时会出现:
 
-~~~bash
+```bash
 ninja: Entering directory `out/Default'
 [2785/2785] LINK ./quic_client
-~~~
+```
 
 此时QUIC所依赖的环境已经搭建完成，
 转入下面的**Playing with QUIC**部分。
@@ -543,7 +542,7 @@ ninja: Entering directory `out/Default'
 
 ### 3.1 下载www.example.org网页(包括HTTP头部)， 将由quic_server来维护*
 
-~~~bash
+```bash
 # 在用户的家目录新建quic-data目录，此时的$HOME目录为'/home/<user name>'，注意若以root用户运行，其$HOME目录为'/'根目录
 $ mkdir $HOME/quic-data
 
@@ -555,11 +554,11 @@ $ wget -p --save-headers https://www.example.org
 
 # 回到原来的目录proto-quic中
 $ cd -
-~~~
+```
 
 ### 3.2 手动编辑index.html，修改HTTP头部*
 
-~~~bash
+```bash
 # 手动编辑index.html，修改HTTP头部，注意此时的$HOME目录为'/home/<user name>'，不要用root权限运行，否则其$HOME目录为'/'根目录
 $ vi $HOME/quic-data/www.example.org/index.html
 
@@ -580,7 +579,7 @@ X-Original-Url: https://www.example.org/index.html^M
 ^M     [一个空行划分HTTP头部和正文]
 <!doctype html>...，如果是二进制文件或普通文本，则为二进制内容或普通的文本内容
 (其中^M表示Windows的CR/LF换行，在vi中在编辑模式下可以用"ctrl+v, ctrl+m"输入，而非普通的可见字符。)
-~~~
+```
 
 ---
 
@@ -590,14 +589,14 @@ X-Original-Url: https://www.example.org/index.html^M
 
 ### 4.1 在服务器端生成HTTPS服务器证书[proto-quic/src目录下]*
 
-~~~bash
+```bash
 # 由proto-quic/src进入net/tools/quic/certs目录
 $ cd net/tools/quic/certs
 
 # 运行脚本，生成pem格式的证书和pkcs8格式的私钥
 $ ./generate-certs.sh
 (注意脚本中生成证书的有效期为三天，可以修改脚本，搜索days，将其后的参数3改为365或其他更大的数字，这样就不用时常更新证书了)
-~~~
+```
 
 除了服务器的证书和公钥，此脚本还将生成CA证书(`net/tools/quic/certs/out/2048-sha256-root.pem`)
 您需要将其添加到操作系统的根证书存储，以便在证书验证期间使其可信。
@@ -605,7 +604,7 @@ $ ./generate-certs.sh
 
 ### 4.2 在客户端中添加HTTPS服务器证书[proto-quic/src/net/tools/quic/certs目录下]*
 
-~~~bash
+```bash
 # 安装管理证书的工具(选择符合自己Linux发行版的其中一行即可)：
 - Debian/Ubuntu: $ sudo apt-get install libnss3-tools
 - Fedora: su -c "yum install nss-tools"
@@ -636,7 +635,7 @@ $ certutil -d ~/.pki/nssdb -N
 $　certutil -d $HOME/.pki/nssdb -A -t "P,," -n quic-server -i out/leaf_cert.pem
 数据库类型从flat files到Berkeley DB，最后到sqllite, 所以最新版的话sql:<DIRECTORY LEVEL PATH OF DATABASE>是必须的，如果显示格式不支持，则去掉前缀"sql:"。
 当然，同样可以新建数据库，这样就可以保证使用的是sqllite格式的。
-~~~
+```
 
 ---
 
@@ -644,7 +643,7 @@ $　certutil -d $HOME/.pki/nssdb -A -t "P,," -n quic-server -i out/leaf_cert.pem
 
 ### 5.1 运行quic_server服务器 [proto-quic/src目录下]*
 
-~~~bash
+```bash
 # 运行quic_server架设网站，此时的$HOME目录为'/home/<user name>'，注意若以root用户运行，其$HOME目录为'/'根目录
 $ ./out/Debug/quic_server --quic_in_memory_cache_dir=$HOME/quic-data/www.example.org --certificate_file=net/tools/quic/certs/out/leaf_cert.pem --key_file=net/tools/quic/certs/out/leaf_cert.pkcs8  --port=6121 --v=1（如果需要显示更多的log信息，则使用该参数）
 
@@ -654,11 +653,11 @@ $ ./out/Debug/quic_server --quic_in_memory_cache_dir=$HOME/quic-data/www.example
 重点检查1： www.example.org文件夹内的所有文件(包括隐藏文件)的内容必须保持3.2所提格式。
 #查看www.example.org文件夹内所有文件的命令:
 $ ls -a /home/<user name>/quic-data/www.example.org/
-~~~
+```
 
 quic_server程序的其他可选参数:
 
-~~~bash
+```bash
 $./out/Debug/quic_server -h
 Usage: quic_server [options]
 
@@ -670,11 +669,11 @@ Options:
 --certificate_file=<file> path to the certificate chain
 --key_file=<file> path to the pkcs8 private key
 --v=1 show verbose which level equals to 1
-~~~
+```
 
 ### 5.2 使用quic_client客户端，通过QUIC请求文件[proto-quic/src目录下]*
 
-~~~bash
+```bash
 $ ./out/Debug/quic_client --host=127.0.0.1 --port=6121 https://www.example.org/index.html --v=1(如果需要显示更多的信息，则使用该参数） --disable-certificate-verification(如果在客户端没有添加服务器根证书的信任，则使用该参数)  
 
 注意：./out/Debug/quic_client是客户端程序，后面的均为参数。
@@ -685,11 +684,11 @@ $ ./out/Debug/quic_client --host=127.0.0.1 --port=6121 https://www.example.org/i
 (其中^M表示Windows的CR/LF换行，在vi中在编辑模式下可以用"ctrl+v, ctrl+m"输入，而非普通的可见字符。)
 重点检查2:  服务器是否生成了证书，客户端是否添加了相应证书
 重点检查3:  服务器目录中的文件index.html中的HTTP头部的第一行必须为HTTP/1.1 200 OK^M，且HTTP头部与正文之间必须相隔一个空行。
-~~~
+```
 
 quic_client程序的其他可选参数:
 
-~~~bash
+```bash
 $./out/Debug/quic_client -h
 Usage: quic_client [options] <url>
 
@@ -709,11 +708,11 @@ Options:
 --initial_mtu=<initial_mtu> specify the initial MTU of the connection
 --disable-certificate-verification do not verify certificates
 --v=1 show verbose which level equals to 1
-~~~
+```
 
 特别说明 - 如果传输其他文件:
 
-~~~bash
+```bash
 如果需要传输视频、图像、文本等任何其他文件(包括index.html)，则需要在该文件的头部加上Http头部。
 例如添加了bunny_480_100kbit_dash.mp4到quic-data/www.example.org目录下。
 
@@ -745,20 +744,20 @@ X-Original-Url: https://www.example.org/bunny_480_100kbit_dash.mp4^M
 
 # 或者使用google-chrome浏览器访问 (建议先在浏览器设置中清空浏览器缓存)：
 google-chrome --user-data-dir=/tmp/chrome-profile --no-proxy-server --enable-quic --origin-to-force-quic-on=www.example.org:443 --host-resolver-rules='MAP www.example.org:443 127.0.0.1:6121' https://www.example.org/bunny_480_100kbit_dash.mp4
-~~~
+```
 
 如果出现以下认证问题，则请按4.2删除证书后，再次添加证书。或者在client命令后后加上
 `--disable-certificate-verification`参数。
 
-~~~bash
+```bash
 [1109/061201:ERROR:cert_verify_proc_nss.cc(942)] CERT_PKIXVerifyCert for www.example.org failed err=-8179
 [1109/061201:WARNING:proof_verifier_chromium.cc(466)] Failed to verify certificate chain: net::ERR_CERT_AUTHORITY_INVALID
 Failed to connect to 127.0.0.1:6121. Error: QUIC_PROOF_INVALID
-~~~
+```
 
 成功时会显示:
 
-~~~bash
+```bash
 Connected to 127.0.0.1:6121
 Request:
 headers:
@@ -840,7 +839,7 @@ body: <!doctype html>
 </html>
 
 Request succeeded (200).
-~~~
+```
 
 ### 5.3 也可以使用chrome浏览器作为客户端来请求文件
 
@@ -849,14 +848,14 @@ Ubuntu 64bit的google-chrome浏览器下载地址:
 
 下载后，使用dpkg进行安装。
 
-~~~bash
+```bash
 # 安装chrome浏览器
 $ dpkg -i google-chrome-stable_current_amd64.deb
-~~~
+```
 
 接着，使用使用chrome请求文件。
 
-~~~bash
+```bash
 $ google-chrome \
   --user-data-dir=/tmp/chrome-profile \
   --no-proxy-server \
@@ -871,8 +870,7 @@ $ google-chrome \
 所以浏览器访问的是 https://www.example.org/index.html 。
 
 注意：如果改动了网页的内容，然后浏览器访问没有变化，则可能是浏览器缓存的问题。可以到浏览器里清空缓存(Clear browsing data - Cached images and files)。
-~~~
-
+```
 
 ## 参考文献
 
@@ -880,6 +878,7 @@ $ google-chrome \
 - [Playing with QUIC](https://www.chromium.org/quic/playing-with-quic)
 
 ---
+
 The End.
 
 zhlinh

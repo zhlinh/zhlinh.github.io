@@ -21,9 +21,9 @@ date: 2023-08-27
 
 **推荐小鹤双拼输入法**
 
-- 没有五笔基础的推荐使用双拼输入法，可有效减少`按键次数`，即所有字最多两次按键。基本上一个下午就可上手，上手后强制使用一周即可z熟练
+- 没有五笔基础的推荐使用双拼输入法，可有效减少`按键次数`，即所有字最多两次按键。基本上一个下午就可上手，上手后强制使用一周即可熟练
 - 双拼键位方案推荐[小鹤双拼](https://www.flypy.com/)，左右手比较均衡，没有使用逗号分号作为按键
-- 如果对减少`重码`有需求的话，可以增加辅助码，甚至字形（即部首）的学习。如果全拼每分钟能打 60 个字，双拼能达到 80，双拼加辅助码 100，双拼加双形 120。
+- 如果对减少`重码`有需求的话，可以增加辅助码，甚至字形（即部首）的学习。如果全拼每分钟能打 60 个字，双拼能达到 80，双拼加辅助码 100，双拼加双形 120
 - 个人觉得普通双拼应该就可以满足大多数人的需求了，辅助码使用频率实际上也挺低的，生僻字词才会用到，常用字词基本首选或首屏（输入法也会自动记录或者支持设置常用的组合）
 
 ### 1.2 快捷键
@@ -62,7 +62,7 @@ date: 2023-08-27
 
 - 同步和插件生态做的很好
 
-插件推荐，这个实际上可以单独成篇，因为插件生态才是一个好产品的灵魂，Chrome如是，VSCode如是，Vim如是。可以查看这个列表[awesome-chome](https://github.com/xyNNN/awesome-chrome)。一下是一些装了又删，删了又装，目前留下的
+插件推荐，这个实际上可以单独成篇，因为插件生态才是一个好产品的灵魂，Chrome如是，VSCode如是，Vim如是。可以查看这个列表[awesome-chome](https://github.com/xyNNN/awesome-chrome)。以下是一些装了又删，删了又装，目前留下的
 
 - [Bitwarden - Free Password Manager](https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb) - 密码管理工具
 - [Create Link](https://chrome.google.com/webstore/detail/create-link/gcmghdmnkfdbncmnmlkkglmnnhagajbm) - 复制链接为多种格式，比如可以直接复制为markdown的形式，而且会自动带上网页的标题，对于分享链接实在太友好了，快捷键建议设置为`CMD+Shitf+C`
@@ -78,7 +78,7 @@ date: 2023-08-27
 - [Tab Session Manager](https://chrome.google.com/webstore/detail/tab-session-manager/iaiomicjabeggjcfkbimgmglanimpnae) - 保存当前所有打开网页的记录，可方便用于同步中，因为很多时候打开的网页没有看完（或者这一系列网页属于同一个组合），需要切换到另一个电脑，或者切换到下一次查看时。之前还用过同类的[Session Manager](https://chrome.google.com/webstore/detail/session-manager/mghenlmbmjcpehccoangkdpagbcbkdpc)，但还是Tab Session Manager更好用。使用时建议关闭自动保存的功能，或者限制自动保存的个数为1个，否则会产生默认10个自动保存的Tab组合
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) - 可以自定义网页中需要屏蔽的元素
 - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb) - vim模式的快捷键，使用后可以不用鼠标浏览网页，有vim经验的应该会觉得相当好用，设置中可以修改自定义按键，推荐[这个方案](https://gist.github.com/zhlinh/773825e7f71da977eff8ef44d3546aea)，将`f`绑定为查找后新标签页打开（原先`f`是当前页面打开），将`>`绑定为向后翻页，等等
-- [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) -这个就是大杀器了，会极大拓展插件的边界，看到另一个插件世界，脚本可以查看[Greasy Fork](https://greasyfork.org/zh-CN)，但需要注意鉴别，推荐使用最近更新的经常更新，用户数较多的，而且不建议使用集合体
+- [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) -这个就是大杀器了，会极大拓展插件的边界，看到另一个插件世界，脚本可以查看[Greasy Fork](https://greasyfork.org/zh-CN)，但需要注意鉴别，推荐使用最近更新的，经常更新的，用户数较多的，而且不建议使用集合体
 
 ## 4. 密码管理工具篇
 
@@ -104,7 +104,7 @@ date: 2023-08-27
 
 **推荐Snipase截图工具**
 
-- 全平台支持，在windows上无疑应该是最好用的了，在macOS上也是数一数二的
+- 全平台支持，在Windows上无疑应该是最好用的了，在macOS上也是数一数二的
 - 截图是`F1`，截取或者复制的内容上屏显示是`F3`，如果是笔记本电脑，可能需要先[恢复F1、F2作为标准功能键的功能](https://support.apple.com/zh-cn/HT204436)
 - 首次使用按F1时会要求屏幕截取的权限
 - F3上屏之后双击上屏的内容（或者按ESC键）是取消显示，右键可以显示工具栏，支持各种标注工具
@@ -126,7 +126,7 @@ date: 2023-08-27
 
 **推荐MarkText作为简单Markdown的编写工具**
 
-- 自从Typora收费之后，MarkText可以完全平替，也是所见即所得（WYSIWYG - What You See Is What You Get）全平台支持，开源，左侧SideBar的界面甚至还更喜欢一点，可能是比较贴近VSCode的切换风格
+- 自从Typora收费之后，MarkText可以完全平替，也是所见即所得（WYSIWYG - What You See Is What You Get）全平台支持，开源，左侧SideBar的界面甚至还更喜欢一点，可能是更贴近VSCode的切换风格
 - 如果是直接下载的安装包，打开后会提示是否放到废纸篓中，无法打开，需要先执行`sudo xattr -r -d com.apple.quarantine /Applications/MarkText.app`
 
 #### [☆Evernote-推荐常驻Dock](https://evernote.com/blog/)
@@ -143,9 +143,9 @@ date: 2023-08-27
 
 - 如果对离线笔记应用有需求的，推荐Obsidian，官方也支持同步功能，设置中打开同步即可，也可以用WedDev实现同步。如果想迁移Evernote的笔记尝试可以借助[yarle](https://github.com/akosbalasko/yarle)
 - 当然，其最重点的功能是支持**双向链接**，方便构建知识图谱，且插件生态相当丰富
-- 支持vimBinding，简直程序员的福音，但启用vim之后有一个比较烦的就是中英文转换的问题，因为输入时是中文，但转换到normal模式时又需要中文，希望可以有插件可以解决这一问题，Idea编辑器的vim插件就支持normal下自动切换为英文的设置
+- 支持vimBinding，简直程序员的福音，但启用vim之后有一个比较烦的就是中英文转换的问题，因为输入时是中文，但转换到normal模式时的操作又需要英文，希望可以有插件可以解决这一问题，Idea编辑器的vim插件就有支持normal下自动切换为英文的设置
 - 至于说是否可以直接替代MarkText，可能离散的md文件，比如README.md还是倾向于直接使用MarkText打开来编辑，但需要存档笔记自然会使用Obsidian
-- 插件和主题可以查看[awesome-obsidian](https://github.com/kmaasrud/awesome-obsidian)，主题目前比较喜欢[Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus)，插件推荐[大纲视图-Quite Outline](https://github.com/guopenghui/obsidian-quiet-outline/tree/master)，确实比官方的要好用的多。设置中打开社区插件的开关，然后在社区插件中搜索安装即可，安装后使用`CMD+P`打开快捷命令模式，然后输入`Quite Outline`来显示大纲视图
+- 插件和主题可以查看[awesome-obsidian](https://github.com/kmaasrud/awesome-obsidian)，主题目前比较喜欢[Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus)，插件推荐[大纲视图-Quite Outline](https://github.com/guopenghui/obsidian-quiet-outline/tree/master)，确实比官方的要好用得多。设置中打开社区插件的开关，然后在社区插件中搜索安装即可，安装后使用`CMD+P`打开快捷命令模式，然后输入`Quite Outline`来显示大纲视图
 - 插件建议一开始先不要安装太多，用一段时间后再按需安装，因为有些插件的使用还是有点复杂的，有的还涉及Canvas
 - `CMD+P`可以打开快捷命令模式
 
@@ -165,19 +165,24 @@ date: 2023-08-27
 
 ## 8. 字体篇
 
-因为ohmyzsh的主题大多需要nerd字体，所以此处主要推荐支持nerd字体的，当然实际上是在原字体的基础上增加了特殊符号的patch
-推荐使用[nerd-fonts](https://github.com/ryanoasis/nerd-fonts/tree/master)中的脚本进行安装，clone时记得一定要使用`git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git`指定层级进行下载
+#### [☆nerd-fonts-推荐安装](https://github.com/ryanoasis/nerd-fonts/tree/master)
 
-- [DroidSansMono]( https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DroidSansMono )
-- [JetBrainsMono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
-- [Noto](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Noto)
+- 因为ohmyzsh或者joshuto的主题大多需要nerd字体，所以此处主要推荐支持nerd字体的，当然实际上是在原字体的基础上增加了特殊符号的patch。
+
+- 推荐使用[nerd-fonts](https://github.com/ryanoasis/nerd-fonts/tree/master)中的脚本进行安装，clone时记得一定要使用`git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git`指定层级进行下载。下载后可以使用`./install.sh <字体名>`来进行安装，推荐的字体有：
+  
+  1. [DroidSansMono]( https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DroidSansMono )
+  
+  2. [JetBrainsMono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
+  
+  3. [Noto](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Noto)
 
 ## 9. 终端工具篇
 
 #### [☆iterm2-推荐常驻Dock](https://iterm2.com/)
 
 - macOS上最好用的终端工具了
-- 推荐使用[solarized](https://github.com/altercation/solarized)主题，项目中有一个iterm2-colors-solarized文件夹是给iterm2的，下载后，点击其中的`Solarized Dark.itermcolors`和`Solarized Light.itermcolors`即可，安装完成后，在Profile-Colors-Color Presets选择相应的Solarized即可
+- 推荐使用[solarized](https://github.com/altercation/solarized)主题，项目中有一个iterm2-colors-solarized文件夹是给iterm2的，下载后，点击其中的`Solarized Dark.itermcolors`和`Solarized Light.itermcolors`安装，安装完成后，在Profile-Colors-Color Presets选择相应的Solarized即可
 - 建议增大默认窗口的大小，在Profile-Window中，将列设置为120列，行设置为35
 - 建议更换为Nerd字体，并增大字体的大小，在Profile-Text中更换Nerd系列的字体，并将字体大小设置为17
 
@@ -195,11 +200,11 @@ date: 2023-08-27
 
 ```bash
 # 需要安装的
-# git-open
+# git-open，在git项目中使用git open可以用浏览器打开对应的链接
 git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open
-# zsh-autosuggestions
+# zsh-autosuggestions，命令提示
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# zsh-syntax-highlighting
+# zsh-syntax-highlighting，语法高亮
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # 其他自带的
 # z，目录跳转，可以通过z 关键字来跳转目录

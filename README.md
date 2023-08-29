@@ -18,11 +18,23 @@ ZHLINH'S TECH BLOG based on the template [Skinny Bones](https://mmistakes.github
 ## USAGE
 
 Install:
+
 ```
 $ bundle install
+
+
+# If got stuck or 'bundler' (2.3.11) required by ... ERROR
+# Maybe should change another gem source
+$ gem sources
+$ gem sources --remove https://rubygems.org/
+$ gem sources -a https://mirrors.tencent.com/rubygems/
+
+# Also set config on bundle based project
+bundle config mirror.https://rubygems.org https://mirrors.tencent.com/rubygems/
 ```
 
 Script to run Jekyll:
+
 ```
 $ bundle exec jekyll build
 $ bundle exec jekyll serve
@@ -148,7 +160,6 @@ You can also group pages in a `_pages` folder similiar to `_posts`.
 
 `_includes/navigation.html` and `_includes/navigation-sliding.html` retrieve the
 links from the definition in `_data/navigation.yml` and `_data/navigation-sliding.yml`.
-
 
 ## LICENSE
 

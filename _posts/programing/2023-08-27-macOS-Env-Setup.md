@@ -73,9 +73,10 @@ date: 2023-08-27
 - [Linkclump](https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj) - 批量打开链接，建议快捷键设置为`Shift+鼠标左键`选择区域
 - [Markdown Preview Plus](https://chrome.google.com/webstore/detail/markdown-preview-plus/febilkbfcbhebfnokafefeacimjdckgl) - 浏览器显示markdown预览
 - [Momentum](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca) - 新标签页的壁纸，设置中可以关闭Focus和TODO功能
+- [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh) - 暗黑模式，如果喜欢暗黑模式的可以安装这个插件，可以方便切换暗黑
 - [Online Dictionary Helper](https://chrome.google.com/webstore/detail/online-dictionary-helper/lppjdajkacanlmpbbcdkccjkdbpllajb) - 划词翻译插件，目前最好用的了，柯林斯词典、剑桥词典、牛津词典，还支持anki
 - [QR Code Generator](https://chrome.google.com/webstore/detail/qr-code-generator/afpbjjgbdimpioenaedcjgkaigggcdpp) - 生成当前页面的二维码，有时候需要手机打开网页或者浏览时比较实用，而且也可以修改二维码的内容
-- [Tab Session Manager](https://chrome.google.com/webstore/detail/tab-session-manager/iaiomicjabeggjcfkbimgmglanimpnae) - 保存当前所有打开网页的记录，可方便用于同步中，因为很多时候打开的网页没有看完（或者这一系列网页属于同一个组合），需要切换到另一个电脑，或者切换到下一次查看时。之前还用过同类的[Session Manager](https://chrome.google.com/webstore/detail/session-manager/mghenlmbmjcpehccoangkdpagbcbkdpc)，但还是Tab Session Manager更好用。使用时建议关闭自动保存的功能，或者限制自动保存的个数为1个，否则会产生默认10个自动保存的Tab组合
+- [Tab Session Manager](https://chrome.google.com/webstore/detail/tab-session-manager/iaiomicjabeggjcfkbimgmglanimpnae) - 保存当前所有打开网页的记录，相当于是书签的集合。因为很多时候打开的网页没有看完（或者这一系列网页属于同一个组合），需要切换到另一个电脑，或者切换到下一次查看。之前还用过同类的[Session Manager](https://chrome.google.com/webstore/detail/session-manager/mghenlmbmjcpehccoangkdpagbcbkdpc)，但还是Tab Session Manager更好用。使用时建议关闭自动保存的功能，或者限制自动保存的个数为1个，否则会产生默认10个自动保存的Tab组合
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) - 可以自定义网页中需要屏蔽的元素
 - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb) - vim模式的快捷键，使用后可以不用鼠标浏览网页，有vim经验的应该会觉得相当好用，设置中可以修改自定义按键，推荐[这个方案](https://gist.github.com/zhlinh/773825e7f71da977eff8ef44d3546aea)，将`f`绑定为查找后新标签页打开（原先`f`是当前页面打开），将`>`绑定为向后翻页，等等
 - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) -这个就是大杀器了，会极大拓展插件的边界，看到另一个插件世界，脚本可以查看[Greasy Fork](https://greasyfork.org/zh-CN)，但需要注意鉴别，推荐使用最近更新的，经常更新的，用户数较多的，而且不建议使用集合体
@@ -157,27 +158,49 @@ date: 2023-08-27
 - 注意注册之后，一定要开启两步验证（2FA），两步验证工具推荐使用[Authy](https://authy.com/) 
 - 对笔记审美有需求的可以使用Notion来代替Evernote，官方直接支持导入，设置中选择导入可以选择Evernote，授权访问即可
 
-## 7. 网盘工具篇
+## 7. GTD工具篇
+
+#### [☆滴答清单-推荐常驻Dock](https://dida365.com/)
+
+**推荐滴答清单作为GTD工具**
+
+- 滴答清单无疑是最好用的GTD任务管理和待办事项工具了
+
+- 滴答清单有国内版(dida365.com)和国际版(ticktick.com)，但目前选择了国内版，主要是艾宾浩斯重复提醒的需求，对于学习来说简直太好用了。另外国内版还有农历的功能
+
+## 8. 压缩解压工具篇
+
+#### [☆Bandizip-推荐安装](https://en.bandisoft.com/bandizip)
+
+**推荐Bandizip作为压缩解压工具**
+
+- Bandizip无广告，界面整洁，支持多种压缩格式
+
+- 在Windows是免费的，在macOS上是收费的，可以买断，目前还没有找到功能相当的平替。目前来看还是很值得购买的
+
+## 9. 网盘工具篇
 
 - 网盘工具基本都大同小异
 - [坚果云](ttps://www.jianguoyun.com/)算是其中比较特别的，按流量限制而不是按容量限制，而且支持WebDev，对于国内网盘工具来说来说简直太牛了
 - 其他的就看买了哪家的会员了
 
-## 8. 字体篇
+## 10. 字体篇
 
 #### [☆nerd-fonts-推荐安装](https://github.com/ryanoasis/nerd-fonts/tree/master)
 
 - 因为ohmyzsh或者joshuto的主题大多需要nerd字体，所以此处主要推荐支持nerd字体的，当然实际上是在原字体的基础上增加了特殊符号的patch。
 
-- 推荐使用[nerd-fonts](https://github.com/ryanoasis/nerd-fonts/tree/master)中的脚本进行安装，clone时记得一定要使用`git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git`指定层级进行下载。下载后可以使用`./install.sh <字体名>`来进行安装，推荐的字体有：
+- 推荐使用[nerd-fonts](https://github.com/ryanoasis/nerd-fonts/tree/master)中的脚本进行安装，clone时记得一定要使用`git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git`指定层级为1进行下载，否则会特别慢。下载后可以使用`./install.sh <字体名>`来进行安装，推荐的字体有：
   
-  1. [DroidSansMono]( https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DroidSansMono )
+  1. [DejaVuSansMono]( https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DejaVuSansMono )
   
-  2. [JetBrainsMono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
+  2. [DroidSansMono]( https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DroidSansMono )
   
-  3. [Noto](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Noto)
+  3. [JetBrainsMono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
+  
+  4. [Noto](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Noto)
 
-## 9. 终端工具篇
+## 11. 终端篇
 
 #### [☆iterm2-推荐常驻Dock](https://iterm2.com/)
 
@@ -209,6 +232,34 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # 其他自带的
 # z，目录跳转，可以通过z 关键字来跳转目录
 ```
+
+#### [☆额外的命令行工具-推荐使用brew安装](https://github.com/toolleeo/cli-apps)
+
+以下的都可以通过`brew install xxx`来安装，最好选用c++或者rust实现的，性能会好的多
+
+- [tldr](https://github.com/tldr-pages/tldr) - 替代man，man很多时候都抓不到重点，tldr会给出最常用的例子，以下的命令不懂怎么使用时都可以使用`tldr <xxx>`来查看使用示例
+
+- [ripgrep](https://github.com/BurntSushi/ripgrep) - 替代grep，实在是太好用，而且快很多，不指定目录/文件时会搜索当前目录的所有text文件。安装后使用`rg <xxx正则表达式> [目录/文件名]`查找字符
+
+- [ripgrep-all](https://github.com/phiresky/ripgrep-all) - ripgrep的升级版，不只查找文本文档，而且还会查找pdf，ebook，office文件和压缩文件(zip和tar.gz等)，安装后使用`rga <xxx正则表达式> [目录/文件名]`查找字符
+
+- [fd](https://github.com/sharkdp/fd) - 替代find，优化常用选项为默认，也会快很多，不指定目录/文件时会搜索当前目录的所有文件。安装后使用`fd <xxx正则表达式> [目录/文件名]`查找文件
+
+- [fpp](https://github.com/facebook/PathPicker) - 文件选择器，例如可以使用`ls | fpp`或者`git status | fpp`或者`fd test | fpp`
+
+- [joshuto](https://github.com/kamiyaa/joshuto) - 替代ranger，终端的文件管理器，使用vim的按键模式，而且支持文件预览。建议添加alias到`~/.bash_profile`中，`alias ra=joshuto`，这样就可以用`ra`来唤醒文件管理器
+
+## 12. IDE篇
+
+#### [☆JetBrains Toolbox-推荐安装](https://www.jetbrains.com/toolbox-app/)
+
+jetbrain的全家桶，安装后可以按需下载对应语言的IDE，也可以使用Toolbox来更新。PyCharm Community，Clion，Rider，AppCode，Android Studio等
+
+#### [☆VSCode Insider-推荐常驻Dock](https://code.visualstudio.com/insiders/)
+
+之所以用VSCode Insider而不用VSCode，主要是为了使用GitHub Copilot的Chat功能，可以通过[该网址](https://docs.github.com/en/copilot/github-copilot-chat/using-github-copilot-chat )申请白名单。其他功能的和VSCode 相同
+
+
 
 ---
 

@@ -249,17 +249,43 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 - [joshuto](https://github.com/kamiyaa/joshuto) - 替代ranger，终端的文件管理器，使用vim的按键模式，而且支持文件预览。建议添加alias到`~/.bash_profile`中，`alias ra=joshuto`，这样就可以用`ra`来唤醒文件管理器
 
+#### [☆vim-推荐安装](https://github.com/vim/vim/)
+
+- 可以使用`brew install vim`来进行安装，如果是使用原生的[vim](https://github.com/vim/vim/)，推荐的配置是[spf1-vim]( https://github.com/spf13/spf13-vim )，通过` curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh`来进行安装，默认的leader是逗号`,`
+
+- 自定义的配置可以写在`~/.vimrc.local`和`~/.vimrc.before.local`中， 自定义的插件配置可以写在`~/.vimrc.bundles.local`中，更新插件后，需要调用` vim +BundleInstall! +BundleClean +q`来通过bundle更新插件
+
+- 当然目前社区比较热门的还是[nvim](https://github.com/neovim/neovim)，相当于vim的分支版本，插件和配置通过lua脚本编写，得益于LuaJIT的运行环境，可有效提高性能
+
+- 目前自己也切换到了nvim，可以通过`brew install nvim`来进行安装，推荐的配置是[LazyVim](https://github.com/LazyVim/LazyVim)，如果没有备份原来配置的需求，可直接使用`git clone https://github.com/LazyVim/starter ~/.config/nvim`来进行安装，之后可以删除`.git`文件夹，`rm -rf ~/.config/nvim/.git`，之后可以将nvim目录推送到自己的git中，方便维护自己的配置。随后执行启动`nvim`会安装默认的插件配置，默认的leader是`空格`
+
+- 如果相修改默认的leader，可以修改`~/.config/nvim/lua/config/options.lua`文件，添加以下设置
+
+```bash
+-- let leader to be comma
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
+```
+
 ## 12. IDE篇
 
 #### [☆JetBrains Toolbox-推荐安装](https://www.jetbrains.com/toolbox-app/)
 
-jetbrain的全家桶，安装后可以按需下载对应语言的IDE，也可以使用Toolbox来更新。PyCharm Community，Clion，Rider，AppCode，Android Studio等
+Jetbrains的全家桶，安装后可以用Toolbox按需下载对应语言的IDE，也可以使用Toolbox来更新。
+
+- PyCharm Community(For Python)
+
+- Clion(For C++)
+
+- Rider(For C#)
+
+- AppCode(For iOS)
+
+- Android Studio(For Android)
 
 #### [☆VSCode Insider-推荐常驻Dock](https://code.visualstudio.com/insiders/)
 
-之所以用VSCode Insider而不用VSCode，主要是为了使用GitHub Copilot的Chat功能，可以通过[该网址](https://docs.github.com/en/copilot/github-copilot-chat/using-github-copilot-chat )申请白名单。其他功能的和VSCode 相同
-
-
+之所以用VSCode Insider而不用VSCode，主要是为了使用GitHub Copilot的Chat功能，可以通过[该网址](https://docs.github.com/en/copilot/github-copilot-chat/using-github-copilot-chat )申请白名单。其他功能的和VSCode相同
 
 ---
 

@@ -176,7 +176,7 @@ date: 2023-08-27
 
 - Bandizip无广告，界面整洁，支持多种压缩格式
 
-- 在Windows是免费的，在macOS上是收费的，可以买断，目前还没有找到功能相当的平替。目前来看还是很值得购买的
+- 在Windows是免费的，在macOS上是收费的，可以买断，目前还没有找到功能相当的平替，还是很值得购买的
 
 ## 9. 网盘工具篇
 
@@ -255,7 +255,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 - 自定义的配置可以写在`~/.vimrc.local`和`~/.vimrc.before.local`中， 自定义的插件配置可以写在`~/.vimrc.bundles.local`中，更新插件后，需要调用` vim +BundleInstall! +BundleClean +q`来通过bundle更新插件
 
-- 当然目前社区比较热门的还是[nvim](https://github.com/neovim/neovim)，相当于vim的分支版本，插件和配置通过lua脚本编写，得益于LuaJIT的运行环境，可有效提高性能
+- 当然社区当前比较热门的还是[nvim](https://github.com/neovim/neovim)，相当于vim的分支版本，插件和配置通过lua脚本编写，得益于LuaJIT的运行环境，可有效提高性能
 
 - 目前自己也切换到了nvim，可以通过`brew install nvim`来进行安装，推荐的配置是[LazyVim](https://github.com/LazyVim/LazyVim)，如果没有备份原来配置的需求，可直接使用`git clone https://github.com/LazyVim/starter ~/.config/nvim`来进行安装，之后可以删除`.git`文件夹，`rm -rf ~/.config/nvim/.git`，之后可以将nvim目录推送到自己的git中，方便维护自己的配置。随后执行启动`nvim`会安装默认的插件配置，默认的leader是`空格`
 

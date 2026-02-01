@@ -10,3 +10,4 @@ vendor
 path
 .bundle
 .jekyll-cache/
+.linthis/
